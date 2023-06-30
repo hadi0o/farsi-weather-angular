@@ -1,0 +1,35 @@
+<div class="weather-container" id="app">
+  <div class="upper">
+
+    <div class="app-header">
+      <h1 dir="ltr">هواشناسی</h1>
+      <button *ngIf="tab === 'weather'" (click)="switchTab('settings')"><img src="../assets/icons/settings.svg"></button>
+      <button *ngIf="tab === 'settings'" (click)="switchTab('weather')"><img src="../assets/icons/close.png"></button>
+    </div>
+    <div class="frm-group" dir="rtl">
+      <input id="search-input" type="text" name="input" placeholder="مکان خود را وارد کنید" [(ngModel)]="input" required>
+      <button (click)="searchWeather()" id="btn">جستجو</button>
+    </div>
+
+    <button class="geo-btn" (click)="showWeatherFromPosition()" id="btn">اطلاعات هواشناسی در لوکیشن من</button>
+  </div>
+
+  <div class="lower" *ngIf="tab === 'weather' && isShown">
+    <h2 dir="rtl">دمای هوا در شهر {{city | titlecase}}</h2>
+    <div class="details">
+      <img src="../assets/icons/{{code}}.svg" alt="weather-icon">
+      <h2 class="temperature">{{temp}}</h2>
+      <img src="../assets/icons/celsius.svg" alt="system" class="system">
+    </div>
+    <p class="weather-type">{{current}}</p>
+    <ul class="other-details">
+      <li dir="rtl"><img src="../assets/icons/humidity.svg" alt="humidity"> رطوبت: {{humid}}%</li>
+      <li dir="rtl"><img src="../assets/icons/wind.svg" alt="humidity">باد: {{windspd}} km/h</li>
+    </ul>
+  </div>
+  <div class="lower" *ngIf="tab === 'settings'">
+    <h2>تنظیمات</h2>
+    <weather-settings></weather-settings>
+  </div>
+
+</div>

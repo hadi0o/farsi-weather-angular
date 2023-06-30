@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+![Screenshot 2023-06-30 013738](https://github.com/hadi0o/farsi-weather-angular/assets/98053330/970ac237-98d8-4c37-8127-bb94f6f2db28)
+![Screenshot 2023-06-30 013159](https://github.com/hadi0o/farsi-weather-angular/assets/98053330/21be79f6-b7e2-40f7-a60a-e043ea5de265)
+![Screenshot 2023-06-30 013119](https://github.com/hadi0o/farsi-weather-angular/assets/98053330/5c756212-ad65-4477-a9bb-2faaf78e2f69)
